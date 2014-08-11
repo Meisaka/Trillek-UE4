@@ -2,12 +2,13 @@
 
 #include "Trillek.h"
 #include "TrillekGameMode.h"
+#include "TrillekCharacter.h"
 
 
 ATrillekGameMode::ATrillekGameMode(const class FPostConstructInitializeProperties& PCIP)
 	: Super(PCIP)
 {
-	
+	DefaultPawnClass = ATrillekCharacter::StaticClass();
 }
 
 void ATrillekGameMode::StartPlay()
