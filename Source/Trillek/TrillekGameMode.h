@@ -13,6 +13,8 @@ class TRILLEK_API ATrillekGameMode : public AGameMode
 {
 	GENERATED_UCLASS_BODY()
 
+	virtual void StartPlay() OVERRIDE; 
+
 	
 	
 };

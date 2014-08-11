@@ -10,4 +10,14 @@ ATrillekGameMode::ATrillekGameMode(const class FPostConstructInitializePropertie
 	PlayerControllerClass = ATrillekPlayerController::StaticClass();
 }
 
+void ATrillekGameMode::StartPlay()
+{
+	Super::StartPlay();
+
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Work in Progress!"));
+	}
+}
+
 
