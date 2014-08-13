@@ -29,5 +29,8 @@ protected:
 	/** clears jump flag when key is released */
 	UFUNCTION()
 		void OnStopJump();
+	/** first person camera */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+		TSubobjectPtr<UCameraComponent> FirstPersonCameraComponent;
 	
 };

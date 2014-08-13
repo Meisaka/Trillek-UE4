@@ -7,7 +7,11 @@
 ATrillekCharacter::ATrillekCharacter(const class FPostConstructInitializeProperties& PCIP)
 	: Super(PCIP)
 {
-
+	// Create a CameraComponent
+	FirstPersonCameraComponent = PCIP.CreateDefaultSubobject<UCameraComponent>(this, TEXT("FirstPersonCamera"));
+	FirstPersonCameraComponent->AttachParent = CapsuleComponent;
+	// position the camera above the eyes
+	FirstPersonCameraComponent->RelativeLocation = FVector(0, 0, 50.0f + BaseEyeHeight);
 }
 
 void ATrillekCharacter::BeginPlay()
