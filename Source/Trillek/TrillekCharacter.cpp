@@ -12,6 +12,12 @@ ATrillekCharacter::ATrillekCharacter(const class FPostConstructInitializePropert
 	FirstPersonCameraComponent->AttachParent = CapsuleComponent;
 	// position the camera above the eyes
 	FirstPersonCameraComponent->RelativeLocation = FVector(0, 0, 50.0f + BaseEyeHeight);
+	// create the flashlight first person mesh
+	FlashlightMesh = PCIP.CreateDefaultSubobject<UStaticMeshComponent>(this, TEXT("FlashlightMesh"));
+	FlashlightMesh->SetOnlyOwnerSee(true);
+	FlashlightMesh->AttachParent = FirstPersonCameraComponent;
+	FlashlightMesh->bCastDynamicShadow = false;
+	FlashlightMesh->CastShadow = false;
 }
 
 void ATrillekCharacter::BeginPlay()

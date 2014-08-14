@@ -32,5 +32,8 @@ protected:
 	/** first person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
 		TSubobjectPtr<UCameraComponent> FirstPersonCameraComponent;
+	/** 1st person flashlight view */
+	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+		TSubobjectPtr<UStaticMeshComponent> FlashlightMesh;
 	
 };
