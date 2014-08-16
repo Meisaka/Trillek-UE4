@@ -10,7 +10,7 @@ You can find it here: https://docs.unrealengine.com/latest/INT/Programming/Devel
 
 Current UE4 Version
 ===================
-This is currently built on Unreal Engine 4.3.1
+This is currently built on Unreal Engine 4.4
 
 Building the Project
 ====================
