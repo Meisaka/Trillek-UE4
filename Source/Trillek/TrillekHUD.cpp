@@ -10,4 +10,8 @@ ATrillekHUD::ATrillekHUD(const class FPostConstructInitializeProperties& PCIP)
 
 }
 
+void ATrillekHUD::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+}
 
